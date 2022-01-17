@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
-import './App.css'
+import './App.css';
+import {useNavigate} from 'react-router'
 
 export default function Signup() {
+    const navigate = useNavigate()
 
     const [name, setName] = useState("");
     const [nameError, setNameError] = useState(false);
@@ -95,7 +97,12 @@ export default function Signup() {
             setEmailError('Invalid Email');
         }
     }
-
+    
+    useEffect(() => {
+        if(localStorage.getItem("user")){
+            navigate('/');
+        }
+    }, [])
 
     return (
         <div>

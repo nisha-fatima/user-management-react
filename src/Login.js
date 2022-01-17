@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import {useNavigate} from 'react-router'
 
@@ -63,6 +63,12 @@ export default function Login() {
             }
         }
     }
+
+    useEffect(() => {
+        if(localStorage.getItem("user")){
+            navigate('/');
+        }
+    }, [])
 
 return (
     <div>
