@@ -24,12 +24,10 @@ export default function Home() {
             </div>
             :
             <div className='container'>
-            <div>
+                <h1 className='main-heading'>Welcome to Galaxy Page</h1>
                 <button className='button'><Link to="/login">Log in</Link></button>         
                 <br />
-                <br />
-                <button className='button'><Link to="/signup">Sign up</Link></button>          
-            </div>
+                <button className='button'><Link to="/signup">Sign up</Link></button>
         </div>
         }
        

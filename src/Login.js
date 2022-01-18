@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import {useNavigate} from 'react-router'
+import {useNavigate} from 'react-router';
+import { Link } from 'react-router-dom'
 
 
 export default function Login() {
@@ -88,6 +89,8 @@ return (
             {passwordError && <div className='error-msg'>{passwordError}</div>}
 
             <button type='submit' className='submit'>LOGIN</button>
+            <p className='already-msg'>Don't have an account? <Link to="/signup">Signup</Link></p>
+            <p className='already-msg'>Forgot Password? <Link to="/forgot-password">Click here</Link></p>
 
         </form>
     </div>
