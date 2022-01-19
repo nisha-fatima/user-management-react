@@ -20,7 +20,8 @@ export default function Home() {
                 <h4>NAME: {user.name}</h4>
                 <h4>EMAIL: {user.email}</h4>
                 <button onClick={deleteUser} className='submit'>LOGOUT</button>
-
+                <br />
+                <p className='already-msg'>Reset Password? <Link to="/reset-password">Click here</Link></p>
             </div>
             :
             <div className='container'>
